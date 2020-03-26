@@ -17,7 +17,6 @@ dummy:
 # will copy the admin key to the /etc/ceph/ directory
 #copy_admin_key: false
 
-#user_config: false
 #test:
 #  name: "test"
 #  pg_num: "{{ osd_pool_default_pg_num }}"
@@ -53,6 +52,8 @@ dummy:
 # To use a particular secret, you have to add 'key' to the dict below, so something like:
 # - { name: client.test, key: "AQAin8tUMICVFBAALRHNrV0Z4MXupRw4v9JQ6Q==" ...
 
+# flip this bit to true, and it will create users for you.
+#user_config: false
 #keys:
 #  - { name: client.test, caps: { mon: "profile rbd", osd: "allow class-read object_prefix rbd_children, profile rbd pool=test" },  mode: "{{ ceph_keyring_permissions }}" }
 #  - { name: client.test2, caps: { mon: "profile rbd", osd: "allow class-read object_prefix rbd_children, profile rbd pool=test2" },  mode: "{{ ceph_keyring_permissions }}" }
